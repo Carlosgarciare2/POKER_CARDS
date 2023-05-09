@@ -2,7 +2,6 @@
 
 body {
   background-color: green;
-  align-items: center;
 }
 
 .card {
@@ -11,8 +10,8 @@ body {
   width: 300px;
   height: 400px;
   border-radius: 5%;
+  margin: auto;
   margin-top: 200px;
-  margin-left: 600px;
 }
 #cardHeader {
   height: 50px;
@@ -31,4 +30,10 @@ body {
 #cardBody {
   padding-top: 60px;
   font-size: 100px;
+}
+
+.boton {
+  width: 70px;
+  margin: auto;
+  margin-top: 50px;
 }

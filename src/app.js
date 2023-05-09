@@ -29,6 +29,9 @@ window.onload = function() {
       paloSuperior.classList.remove("text-danger");
       paloInferior.classList.remove("text-danger");
     }
+
+    let deal = document.querySelector(".boton");
+    deal.addEventListener("click", createCard);
   };
   createCard();
 };
