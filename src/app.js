@@ -10,10 +10,25 @@ window.onload = function() {
   let num = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
   let palo = ["♦", "♥", "♠", "♣"];
 
-  let numberRandom = num[Math.floor(Math.random() * num.length)];
-  let paloRandom = palo[Math.floor(Math.random() * palo.length)];
+  const createCard = () => {
+    let numberRandom = num[Math.floor(Math.random() * num.length)];
+    let paloRandom = palo[Math.floor(Math.random() * palo.length)];
 
-  document.querySelector("#paloUp").innerHTML = paloRandom;
-  document.querySelector("#paloDown").innerHTML = paloRandom;
-  document.querySelector("#number").innerHTML = numberRandom;
+    let paloSuperior = document.querySelector("#paloUp");
+    paloSuperior.innerHTML = paloRandom;
+
+    let paloInferior = document.querySelector("#paloDown");
+    paloInferior.innerHTML = paloRandom;
+
+    document.querySelector("#number").innerHTML = numberRandom;
+
+    if (paloRandom === "♥" || paloRandom === "♦") {
+      paloSuperior.classList.add("text-danger");
+      paloInferior.classList.add("text-danger");
+    } else {
+      paloSuperior.classList.remove("text-danger");
+      paloInferior.classList.remove("text-danger");
+    }
+  };
+  createCard();
 };
