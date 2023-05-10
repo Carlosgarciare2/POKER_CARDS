@@ -37,3 +37,9 @@ body {
   margin: auto;
   margin-top: 50px;
 }
+
+#paloDown {
+  transform: rotate(180deg);
+  display: flex;
+  align-content: start;
+}
